@@ -373,8 +373,8 @@ export class RequestManager extends EventEmitter {
 
 		// Create the required headers
 		const headers: RequestHeaders = {
-			...this.options.headers,
 			'User-Agent': `${DefaultUserAgent} ${options.userAgentAppendix}`.trim(),
+			...this.options.headers,
 		};
 
 		// If this request requires authorization (allowing non-"authorized" requests for webhooks)
